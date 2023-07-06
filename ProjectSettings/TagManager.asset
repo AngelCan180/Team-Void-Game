@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - player
+  - floor
+  - Box
+  - Ladder
+  - Trap
+  - Rope
+  - Ladder 2
+  - Ladder2
+  - tool
+  - Tool
   layers:
   - Default
   - TransparentFX
