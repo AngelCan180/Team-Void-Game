@@ -15,6 +15,7 @@ TagManager:
   - tool
   - Tool
   - RedLadder
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstacle
+    uniqueID: 1594833593
     locked: 0
