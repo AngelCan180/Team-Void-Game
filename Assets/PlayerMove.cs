@@ -100,8 +100,8 @@ Destroy(collision.gameObject);
 else if (collision.gameObject.CompareTag("Ladder")|| collision.gameObject.CompareTag("Rope"))
 {
 isClimbing = true;
-rb.gravityScale = 0f;
-rb.velocity = Vector2.zero;
+//rb.gravityScale = 0f;
+//rb.velocity = Vector2.zero;
 }
 else if (collision.gameObject.CompareTag("Trap"))
 {
@@ -135,8 +135,8 @@ pickedLadder = collider.gameObject;
 pickedLadder.transform.SetParent(transform);
 pickedLadder.transform.localPosition = new Vector3(0f, 1f, 0f);
 isClimbing = true;
-rb.gravityScale = 0f;
-rb.velocity = Vector2.zero;
+//rb.gravityScale = 0f;
+//rb.velocity = Vector2.zero;
 break;
 }
 }
