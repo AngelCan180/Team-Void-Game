@@ -93,6 +93,8 @@ rb.velocity = Vector2.zero;
 
 private void OnTriggerEnter2D(Collider2D collision)
 {
+
+    //gameObject.SetActive(false);
 if (collision.gameObject.CompareTag("Box"))
 {
 Destroy(collision.gameObject);
@@ -103,7 +105,7 @@ isClimbing = true;
 //rb.gravityScale = 0f;
 //rb.velocity = Vector2.zero;
 }
-else if (collision.gameObject.CompareTag("Trap"))
+else if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Obstacle"))
 {
 ActivateTrap();
 }
