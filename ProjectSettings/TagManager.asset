@@ -56,3 +56,9 @@ TagManager:
   - name: Obstacle
     uniqueID: 1594833593
     locked: 0
+  - name: wrong key
+    uniqueID: 946213085
+    locked: 0
+  - name: key
+    uniqueID: 4259487395
+    locked: 0
