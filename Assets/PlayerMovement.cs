@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isTrapActive = false;
     private Rigidbody2D rb;
+    private Animator controller;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        controller = GetComponent<Animator>();
     }
 
     private void Update()
@@ -41,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
                 // Handle other player movements (left, right, etc.)
                 float horizontalInput = Input.GetAxis("Horizontal");
                 rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+
+
+                if (horizontalInput > 0.0f || horizontalInput < 0.0f)
+                  controller.SetFloat("velocity", 1.0f);
+                  else
+                  controller.SetFloat("velocity", -1.0f);
             }
         }
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e383f6c8777d142a3b4e6e88ca7f07df
+guid: eb982d3e9f9de4a31a57f5b051093836
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a04ba49a5651b46f1926a5f082d8f76c
-      internalID: 1683966090
+      spriteID: e7bfd1753b1fc4ea7bf6ed42cca33313
+      internalID: 483287138
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98094a8868d394988ae0493d91eb95ab
-      internalID: -868653590
+      spriteID: d3ea18b985915448780855647f44c743
+      internalID: -960079435
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2dfaa781241844d19c832a81e01d179
-      internalID: 95468516
+      spriteID: 7691ae225167d4a0ba49382768609069
+      internalID: -770159009
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7893d231dab4849c082774e2e79b9fe7
-      internalID: -305470312
+      spriteID: cb317b158896849bd9b76186dc2527d4
+      internalID: -43309352
       vertices: []
       indices: 
       edges: []
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b316dd89a50c48c0a4d5c91da62f226
-      internalID: 602041110
+      spriteID: b49a20b1b4c6a458ea6545d9d3f759db
+      internalID: 1779979503
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c99ea4def64914f4ea49db8032f01b9f
-      internalID: -48837034
+      spriteID: 03740b62313ae482ea9a2630370675dd
+      internalID: -1177184794
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 805a769dd00f84dc5aa88e08e61fc086
-      internalID: 1104144474
+      spriteID: 12c7c9bd5892745359053eff4b8675cc
+      internalID: 423419469
       vertices: []
       indices: 
       edges: []
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 312f04632c6054377b26f386cb156f6e
-      internalID: 1129977330
+      spriteID: f8016f76401a54ce981fb7e9bc696d19
+      internalID: -812130783
       vertices: []
       indices: 
       edges: []
@@ -287,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1130a04aff575413dac508274710ba2e
-      internalID: -663695265
+      spriteID: 26d105a083c7d44b69877652700c7af1
+      internalID: -516733477
       vertices: []
       indices: 
       edges: []
@@ -308,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb7cba08ba68a48dcb831227c290a3be
-      internalID: 1801157047
+      spriteID: 70aa13e6e281b436eaa27dbba3acd5e8
+      internalID: 950570601
       vertices: []
       indices: 
       edges: []
@@ -325,16 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ezgif.com-gif-maker_0: 1683966090
-      ezgif.com-gif-maker_1: -868653590
-      ezgif.com-gif-maker_2: 95468516
-      ezgif.com-gif-maker_3: -305470312
-      ezgif.com-gif-maker_4: 602041110
-      ezgif.com-gif-maker_5: -48837034
-      ezgif.com-gif-maker_6: 1104144474
-      ezgif.com-gif-maker_7: 1129977330
-      ezgif.com-gif-maker_8: -663695265
-      ezgif.com-gif-maker_9: 1801157047
+      ezgif.com-gif-maker_0: 483287138
+      ezgif.com-gif-maker_1: -960079435
+      ezgif.com-gif-maker_2: -770159009
+      ezgif.com-gif-maker_3: -43309352
+      ezgif.com-gif-maker_4: 1779979503
+      ezgif.com-gif-maker_5: -1177184794
+      ezgif.com-gif-maker_6: 423419469
+      ezgif.com-gif-maker_7: -812130783
+      ezgif.com-gif-maker_8: -516733477
+      ezgif.com-gif-maker_9: 950570601
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
