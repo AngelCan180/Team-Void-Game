@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isTrapActive = false;
     private Rigidbody2D rb;
     private Animator controller;
+    bool facingRight = true;
 
     private void Start()
     {
@@ -44,6 +45,16 @@ public class PlayerMovement : MonoBehaviour
                 float horizontalInput = Input.GetAxis("Horizontal");
                 rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
+                if (horizontalInput > 0 && facingRight)
+                {
+                    Flip();
+                }
+                
+                else if (horizontalInput < 0 && !facingRight) 
+                {
+                    Flip();
+                }
+
 
                 if (horizontalInput > 0.0f || horizontalInput < 0.0f)
                   controller.SetFloat("velocity", 1.0f);
@@ -53,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void Flip()
+    {
+        Vector3 currentScale =  gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("RedLadder"))
