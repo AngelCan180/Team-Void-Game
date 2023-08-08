@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
-    public float jump;
     private float move;
 
     public Rigidbody2D rb;
@@ -15,12 +14,21 @@ public class PlayerMove : MonoBehaviour
 
     private GameObject pickedLadder;
 
-    // added code
-    private AudioSource audioSource;
+    // Audio related
+    private AudioSource moveAudioSource;
+    private AudioSource climbAudioSource;
+    private AudioSource trapAudioSource; // New AudioSource for trap sound
+    public AudioClip climbingSound; // AudioClip for climbing sound
+    public AudioClip trapSound; // New AudioClip for trap sound
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        // Assuming the first AudioSource is for movement, the second is for climbing, and the third is for trap sound
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        moveAudioSource = audioSources[0];
+        climbAudioSource = audioSources[1];
+        trapAudioSource = audioSources[2]; // Assigning the third AudioSource
+        trapAudioSource.clip = trapSound; // Assigning the trap sound to the AudioSource
     }
 
     // Update is called once per frame
@@ -44,23 +52,37 @@ public class PlayerMove : MonoBehaviour
 
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        // added code
+        // Moving sound
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            if (!audioSource.isPlaying)
+            if (!moveAudioSource.isPlaying)
             {
-                audioSource.Play();
+                moveAudioSource.Play();
             }
         }
         else if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
         {
-            audioSource.Stop();
+            moveAudioSource.Stop();
         }
 
-        if (isClimbing && pickedLadder == null) // Only climb when not holding a ladder
+        // Climbing code
+        if (isClimbing && pickedLadder == null)
         {
             float climbSpeed = Input.GetAxis("Vertical");
             rb.velocity = new Vector2(rb.velocity.x, climbSpeed * speed);
+
+            if (!climbAudioSource.isPlaying)
+            {
+                climbAudioSource.clip = climbingSound;
+                climbAudioSource.Play();
+            }
+        }
+        else if (!isClimbing)
+        {
+            if (climbAudioSource.isPlaying)
+            {
+                climbAudioSource.Stop();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -80,6 +102,22 @@ public class PlayerMove : MonoBehaviour
     {
         isTrapActive = true;
         rb.velocity = Vector2.zero;
+
+        if (!trapAudioSource.isPlaying)
+        {
+            trapAudioSource.Play();
+            StartCoroutine(StopTrapSoundAfterDelay(3f)); // Stop the sound after 3 seconds
+        }
+    }
+
+    IEnumerator StopTrapSoundAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (trapAudioSource.isPlaying)
+        {
+            trapAudioSource.Stop();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,7 +126,7 @@ public class PlayerMove : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Ladder")|| collision.gameObject.CompareTag("Rope"))
+        else if (collision.gameObject.CompareTag("Ladder") || collision.gameObject.CompareTag("Rope"))
         {
             isClimbing = true;
         }
