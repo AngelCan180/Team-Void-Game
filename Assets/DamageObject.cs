@@ -4,23 +4,66 @@ using UnityEngine;
 
 public class DamageObject : MonoBehaviour
 {
-    public int damageAmount = 20;
+    public int initialDamage = 20;
+    public int recurringDamage = 10;
+    public float recurringDamageInterval = 3f;
 
-    public AudioClip damageSound;  // Clip to play when the player takes damage.
-    public AudioSource audioSource;  // Source from which to play the clip.
+    private bool isPlayerColliding = false;
+    private float lastRecurringDamageTime;
 
-    void OnTriggerEnter2D(Collider2D other)  // Changed to 2D version
+    public AudioClip damageSound;
+    public AudioSource audioSource;
+
+    void Start()
+    {
+        lastRecurringDamageTime = Time.time;
+    }
+
+    void Update()
+    {
+        if (isPlayerColliding)
+        {
+            if (Time.time - lastRecurringDamageTime >= recurringDamageInterval)
+            {
+                lastRecurringDamageTime = Time.time;
+                InflictRecurringDamage();
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("player"))
         {
             Player player = other.gameObject.GetComponent<Player>();
             if (player != null)
             {
-                player.TakeDamage(damageAmount);
+                player.TakeDamage(initialDamage);
+                isPlayerColliding = true;
 
-                // Play the damage sound.
+                // Play the initial damage sound.
                 audioSource.PlayOneShot(damageSound);
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("player"))
+        {
+            isPlayerColliding = false;
+        }
+    }
+
+    void InflictRecurringDamage()
+    {
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            player.TakeDamage(recurringDamage);
+
+            // Play the recurring damage sound.
+            audioSource.PlayOneShot(damageSound);
         }
     }
 }
