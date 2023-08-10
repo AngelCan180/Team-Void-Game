@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    [SerializeField] private InputAction moveAction;
+
     public float speed;
     private float move;
 
@@ -20,6 +23,14 @@ public class PlayerMove : MonoBehaviour
     private AudioSource trapAudioSource; // New AudioSource for trap sound
     public AudioClip climbingSound; // AudioClip for climbing sound
     public AudioClip trapSound; // New AudioClip for trap sound
+    void OnEnable()
+    {
+        moveAction.Enable();
+    }
+    void OnDisable()
+    {
+        moveAction.Disable();
+    }
 
     void Start()
     {
@@ -47,11 +58,6 @@ public class PlayerMove : MonoBehaviour
                 return; // Player cannot move while trap is active
             }
         }
-
-        move = Input.GetAxis("Horizontal");
-
-        rb.velocity = new Vector2(speed * move, rb.velocity.y);
-
         // Moving sound
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -96,6 +102,11 @@ public class PlayerMove : MonoBehaviour
                 PickLadder();
             }
         }
+    }
+    private void onPlayerMove()
+    {
+        //rb.velocity = new Vector2(speed * move, rb.velocity.y);
+        rb.velocity = moveAction.ReadValue<Vector2>();
     }
 
     public void ActivateTrap()
