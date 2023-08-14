@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     private float trapTimer = 3f;
 
     private GameObject pickedLadder;
+    private Animator animator;
+    
 
     // Audio related
     private AudioSource moveAudioSource;
@@ -40,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         climbAudioSource = audioSources[1];
         trapAudioSource = audioSources[2]; // Assigning the third AudioSource
         trapAudioSource.clip = trapSound; // Assigning the trap sound to the AudioSource
+        animator = GetComponent < Animator > ();
     }
 
     // Update is called once per frame
@@ -82,6 +85,8 @@ public class PlayerMove : MonoBehaviour
                 climbAudioSource.clip = climbingSound;
                 climbAudioSource.Play();
             }
+            animator.SetBool("IsClimbing", true);
+            Debug.Log("Hi");
         }
         else if (!isClimbing)
         {
@@ -89,6 +94,7 @@ public class PlayerMove : MonoBehaviour
             {
                 climbAudioSource.Stop();
             }
+           animator.SetBool("IsClimbing", false); 
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -167,6 +173,7 @@ public class PlayerMove : MonoBehaviour
                 pickedLadder.transform.SetParent(transform);
                 pickedLadder.transform.localPosition = new Vector3(0f, 1f, 0f);
                 isClimbing = true;
+                animator.SetBool("IsClimbing", true);
                 break;
             }
         }
@@ -179,6 +186,7 @@ public class PlayerMove : MonoBehaviour
             pickedLadder.transform.SetParent(null);
             pickedLadder = null;
             isClimbing = true; // Enable climbing when ladder is dropped
+            animator.SetBool("IsClimbing", true);
             rb.gravityScale = 1f;
         }
     }
