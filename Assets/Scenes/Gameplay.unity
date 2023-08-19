@@ -7436,7 +7436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfeef2250551473cb943893f3265e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDamage: 20
+  initialDamage: 5
   recurringDamage: 10
   recurringDamageInterval: 3
   damageSound: {fileID: 8300000, guid: e28ed8f9f0e311b47854935d3850e356, type: 3}
@@ -9444,7 +9444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfeef2250551473cb943893f3265e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDamage: 20
+  initialDamage: 5
   recurringDamage: 10
   recurringDamageInterval: 3
   damageSound: {fileID: 8300000, guid: e28ed8f9f0e311b47854935d3850e356, type: 3}
@@ -12451,7 +12451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfeef2250551473cb943893f3265e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDamage: 10
+  initialDamage: 5
   recurringDamage: 5
   recurringDamageInterval: 3
   damageSound: {fileID: 8300000, guid: e28ed8f9f0e311b47854935d3850e356, type: 3}
