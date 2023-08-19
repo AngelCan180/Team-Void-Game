@@ -95,8 +95,8 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: Left Arm
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.578405, y: 0.5}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1250,15 +1250,15 @@ ScriptedImporter:
     spritePosition: {x: 57, y: 8}
   - name: Right Foot
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5174806, y: 0.46853417}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 71
-      height: 12
+      width: 10
+      height: 10
     spriteID: 0a994a338211c4037a6d99c5a5bc5b1b
     spriteBone:
     - name: Left Foot Bone
