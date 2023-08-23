@@ -39,6 +39,8 @@ public class DamageObject : MonoBehaviour
             if (player != null)
             {
                 player.TakeDamage(initialDamage);
+                Animator anim = player.gameObject.GetComponent<Animator>();
+                anim.SetTrigger("Hurt");
                 isPlayerColliding = true;
 
                 // Play the initial damage sound.
@@ -52,6 +54,8 @@ public class DamageObject : MonoBehaviour
         if (other.gameObject.CompareTag("player"))
         {
             isPlayerColliding = false;
+            Animator anim = other.gameObject.GetComponent<Animator>();
+                anim.ResetTrigger("Hurt");
         }
     }
 
@@ -61,6 +65,8 @@ public class DamageObject : MonoBehaviour
         if (player != null)
         {
             player.TakeDamage(recurringDamage);
+            Animator anim = player.gameObject.GetComponent<Animator>();
+                anim.SetTrigger("Hurt");
 
             // Play the recurring damage sound.
             audioSource.PlayOneShot(damageSound);

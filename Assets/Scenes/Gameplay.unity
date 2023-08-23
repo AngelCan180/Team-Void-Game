@@ -14982,8 +14982,8 @@ MonoBehaviour:
   initialDamage: 5
   recurringDamage: 5
   recurringDamageInterval: 3
-  damageSound: {fileID: 0}
-  audioSource: {fileID: 0}
+  damageSound: {fileID: 8300000, guid: e28ed8f9f0e311b47854935d3850e356, type: 3}
+  audioSource: {fileID: 4580644105431597134}
 --- !u!50 &1793576011
 Rigidbody2D:
   serializedVersion: 4
@@ -18328,7 +18328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4481646759894005817, guid: 95eb63027a7ea433d8b4d4d0e5b40776, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16982414
+      value: 0.1698241
       objectReference: {fileID: 0}
     - target: {fileID: 4481646759894005817, guid: 95eb63027a7ea433d8b4d4d0e5b40776, type: 3}
       propertyPath: m_LocalPosition.y

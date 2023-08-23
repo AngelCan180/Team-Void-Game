@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement; // Needed to manage scenes
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    Animator myanimator;
 
     public void SetMaxHealth(int health)
     {
@@ -19,7 +18,6 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
 
-        myanimator.SetTrigger("Hurt");
         if (health <= 0)
         {
             // Call a method to restart the game
