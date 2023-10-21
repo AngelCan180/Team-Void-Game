@@ -8,21 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: fb1938379f7b64b78b8eb0d4068a8daf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CS #1.unity
     guid: 173947b67770549aea5a35323bd650b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CS #2.unity
     guid: e2643fae25c634393a74f583c8bdc3b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CS #3.unity
     guid: ffd24cbcd7dff4d29b9235ea8e092c36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CS #4.unity
     guid: c5224847a82fc4efda00222fe2af1cda
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CS # 5.unity
     guid: 122f51b650a074d478fef3ca59e89e75
+  - enabled: 1
+    path: Assets/Scenes/Cut Scenes.unity
+    guid: 5f0e5d66ed6c541b6b1cff22ca507704
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: 2cda990e2423bbf4892e6590ba056729

@@ -15,6 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public void LoadCutScene()
     {
-        SceneManager.LoadScene("CS #1");
+        SceneManager.LoadScene("Cut Scenes");
     }
 }

@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' <color=purple>To be continued...</color>'
+  m_text: ' <color=purple>   Congrats!!! </color>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7aadaf21f9ec4992ae14fa041df8481, type: 2}
   m_sharedMaterial: {fileID: -1502534082383007116, guid: a7aadaf21f9ec4992ae14fa041df8481, type: 2}

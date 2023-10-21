@@ -13,7 +13,7 @@ public class SkipScene : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-             SceneManager.LoadScene(sceneName);
+             SceneManager.LoadScene("Gameplay");
         }
     }
 }
