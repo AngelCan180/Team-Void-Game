@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement; // Needed to manage scenes
 
 public class HealthBar : MonoBehaviour
 {
+
     public Slider slider;
+
+    public float restartDelay = 2f;
 
     public void SetMaxHealth(int health)
     {
@@ -22,6 +25,7 @@ public class HealthBar : MonoBehaviour
         {
             // Call a method to restart the game
             RestartGame();
+            Invoke("RestartGame", restartDelay);
         }
     }
 
