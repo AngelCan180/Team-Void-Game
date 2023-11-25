@@ -11,6 +11,8 @@ public class HealthBar : MonoBehaviour
 
     public float restartDelay = 2f;
 
+    public Animator animator;
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -24,7 +26,7 @@ public class HealthBar : MonoBehaviour
         if (health <= 0)
         {
             // Call a method to restart the game
-            RestartGame();
+            animator.SetBool("IsDead", true);
             Invoke("RestartGame", restartDelay);
         }
     }
