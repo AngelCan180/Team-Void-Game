@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float speed;
     private float move;
+    public Transform keyFollowPoint;
 
     public Rigidbody2D rb;
     private bool isClimbing = false;
