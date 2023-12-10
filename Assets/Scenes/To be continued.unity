@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 128538834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.9346, y: 3.9346, z: 3.9346}
+  m_LocalScale: {x: 3.2535093, y: 3.2535093, z: 3.2535093}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1096400783}
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -249, y: 53}
+  m_AnchoredPosition: {x: -221, y: 47}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128538836
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 509.43814, y: 102.29037, z: 395.11426, w: 70.62245}
+  m_margin: {x: 520.18616, y: 102.29037, z: 395.11426, w: 70.62245}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -258,6 +258,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128538834}
   m_CullTransparentMesh: 1
+--- !u!1 &159286094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159286095}
+  - component: {fileID: 159286096}
+  m_Layer: 0
+  m_Name: Congrats Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159286095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159286094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -195.1059, y: -180.46494, z: 5.254174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1096400783}
+  m_Father: {fileID: 175018195}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159286096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159286094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45c5a828e7b942a4bf91685bab73c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CongratsPanel: {fileID: 0}
 --- !u!1 &175018191
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +400,7 @@ RectTransform:
   - {fileID: 884779933}
   - {fileID: 1924427407}
   - {fileID: 709920806}
-  - {fileID: 1096400783}
+  - {fileID: 159286095}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -375,7 +421,7 @@ GameObject:
   - component: {fileID: 709920808}
   - component: {fileID: 709920807}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,7 +776,7 @@ GameObject:
   - component: {fileID: 1096400785}
   - component: {fileID: 1096400784}
   m_Layer: 5
-  m_Name: Back To Main Menu
+  m_Name: Back To Main Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,19 +789,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096400782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.254174}
+  m_LocalScale: {x: 0.82324, y: 0.82324, z: 0.82324}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 128538835}
-  m_Father: {fileID: 175018195}
-  m_RootOrder: 4
+  m_Father: {fileID: 159286095}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -352}
-  m_SizeDelta: {x: 1200, y: 150}
+  m_AnchoredPosition: {x: 180.1059, y: -158.37506}
+  m_SizeDelta: {x: 1216.876, y: 140.2914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096400784
 MonoBehaviour:
@@ -800,7 +846,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1096400785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 159286096}
+        m_TargetAssemblyTypeName: CongratsScene, Assembly-CSharp
+        m_MethodName: BackToMain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1096400785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +1053,7 @@ GameObject:
   - component: {fileID: 1924427409}
   - component: {fileID: 1924427408}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
