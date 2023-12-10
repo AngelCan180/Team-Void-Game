@@ -16,6 +16,8 @@ TagManager:
   - Tool
   - RedLadder
   - Obstacle
+  - ExitDoor
+  - Door
   layers:
   - Default
   - TransparentFX
